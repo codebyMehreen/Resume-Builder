@@ -1,0 +1,96 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f3fcff, #ffffff);
+  color: #333;
+  padding: 20px;
+  transition: background 0.4s ease;
+}
+
+body.dark {
+  background: #222;
+  color: #eee;
+}
+
+.container, .resume {
+  max-width: 900px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+}
+
+body.dark .container,
+body.dark .resume {
+  background: #2f2f2f;
+}
+
+form label {
+  margin-top: 15px;
+  font-weight: bold;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  background: #0078D4;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.resume .header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.resume .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+.section {
+  margin-top: 30px;
+}
+
+.section h2 {
+  color: #0078D4;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+body.dark .section h2 {
+  color: #80ccff;
+  border-color: #555;
+}
+
+.edu-card, .info-card, .about {
+  background: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+body.dark .edu-card,
+body.dark .info-card,
+body.dark .about {
+  background: #3c3c3c;
+}
+
+.download-btn {
+  margin-top: 30px;
+  background: #28a745;
+} 

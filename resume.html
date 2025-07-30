@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ data.name }}'s Resume</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="resume">
+    <div class="header">
+      {% if data.photo_path %}
+        <img src="/{{ data.photo_path }}" class="profile-pic">
+      {% endif %}
+      <div>
+        <h1>{{ data.name }}</h1>
+        <p><strong>Email:</strong> {{ data.email }}</p>
+        <p><strong>Location:</strong> {{ data.location }}</p>
+        <p><strong>Contact:</strong> {{ data.contact }}</p>
+      </div>
+    </div>
+
+    <div class="section"><h2>About Me</h2><div class="about">{{ data.about }}</div></div>
+
+    <div class="section"><h2>Education</h2>
+      <div class="edu-card"><h3>{{ data.primary_edu }}</h3><p>Duration: {{ data.primary_duration }}</p><p>Marks: {{ data.primary_marks }}</p></div>
+      <div class="edu-card"><h3>{{ data.inter_edu }}</h3><p>Duration: {{ data.inter_duration }}</p><p>Marks: {{ data.inter_marks }}</p></div>
+    </div>
+
+    <div class="section"><h2>Skills</h2><div class="info-card">{{ data.skills }}</div></div>
+    <div class="section"><h2>Experience</h2><div class="info-card">{{ data.experience }}</div></div>
+    <div class="section"><h2>Hobbies</h2><div class="info-card">{{ data.hobbies }}</div></div>
+    <div class="section"><h2>Languages</h2><div class="info-card">{{ data.languages }}</div></div>
+    <div class="section"><h2>More Info</h2><div class="info-card">{{ data.more }}</div></div>
+
+    <form action="/download" method="post">
+      {% for key, value in data.items() %}
+        <input type="hidden" name="{{ key }}" value="{{ value }}">
+      {% endfor %}
+      <button class="download-btn" type="submit">Download PDF</button>
+    </form>
+  </div>
+</body>
+</html>

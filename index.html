@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <button id="themeToggle">Toggle Theme</button>
+    <h1>Create Your Resume</h1>
+    <form method="POST" enctype="multipart/form-data">
+      <label>Profile Photo:</label><input type="file" name="photo">
+      <label>Name:</label><input type="text" name="name">
+      <label>Email:</label><input type="text" name="email">
+      <label>Location:</label><input type="text" name="location">
+      <label>Contact Number:</label><input type="text" name="contact">
+      <label>About Me:</label><textarea name="about"></textarea>
+
+      <label>Primary Education:</label><input type="text" name="primary_edu">
+      <label>Duration:</label><input type="text" name="primary_duration">
+      <label>Marks:</label><input type="text" name="primary_marks">
+
+      <label>Intermediate Education:</label><input type="text" name="inter_edu">
+      <label>Duration:</label><input type="text" name="inter_duration">
+      <label>Marks:</label><input type="text" name="inter_marks">
+
+      <label>Skills:</label><textarea name="skills"></textarea>
+      <label>Experience:</label><textarea name="experience"></textarea>
+      <label>Hobbies:</label><textarea name="hobbies"></textarea>
+      <label>Languages:</label><textarea name="languages"></textarea>
+      <label>More Info:</label><textarea name="more"></textarea>
+
+      <button type="submit">Generate Resume</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</body>
+</html>
